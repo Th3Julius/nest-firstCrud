@@ -102,6 +102,19 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
 ## RECOMENDACIONES
 
+Schema Prisma POSTGRESSQL
+```bash
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+```
+
+Archivo docker compose yml POSTGRESSQL
 ```bash
 version: '3.8'
 
