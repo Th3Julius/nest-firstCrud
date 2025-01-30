@@ -2,16 +2,15 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:latest
-    container_name: postgres_db
+    image: mysql:latest
+    container_name: mysql_db
     restart: always
     
     environment:
-      POSTGRES_USER: julius
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: crudtest
+      MYSQL_ROOT_PASSWORD: rootpassword 
+      MYSQL_DATABASE: crudtest
     ports:
-      - "5499:5432"
+      - "3307:3306"
    
 volumes:
   postgres_data:
