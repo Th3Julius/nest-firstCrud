@@ -18,6 +18,6 @@ export class CreateUserDto {
   email: string;
   
   @IsNotEmpty()
-  @IsNumber()
-  password: number;
+  @IsString()
+  password: string;
 }
