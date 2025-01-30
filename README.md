@@ -97,3 +97,27 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+
+
+## RECOMENDACIONES
+
+```bash
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    
+    environment:
+      POSTGRES_USER: USER
+      POSTGRES_PASSWORD: PASSWORD
+      POSTGRES_DB: DB_NAME
+    ports:
+      - "5499:5432"
+   
+volumes:
+  postgres_data:
+```
