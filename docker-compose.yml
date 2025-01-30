@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    
+    environment:
+      POSTGRES_USER: julius
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: crudtest
+    ports:
+      - "5499:5432"
+   
+volumes:
+  postgres_data:
